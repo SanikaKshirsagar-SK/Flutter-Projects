@@ -24,7 +24,7 @@ class _LoginState extends State<Login> {
             height: 32,
             color: const Color.fromRGBO(123, 123, 123, 1),
           ),
-          SvgPicture.asset("assets/design.svg",),
+          SvgPicture.asset("assets/login.svg",),
           const SizedBox(
             height: 15,
           ),
