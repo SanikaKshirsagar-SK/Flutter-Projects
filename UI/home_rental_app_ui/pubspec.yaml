@@ -17,3 +17,13 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+     - assets/Villa1/
+     - assets/Villa2/
+     - assets/Villa3/
+     - assets/Villa4/
+     - assets/Villa5/
+     - assets/Villa6/
+     - assets/Villa7/
+     - assets/Villa8/
+     - assets/

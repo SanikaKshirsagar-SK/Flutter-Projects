@@ -119,6 +119,7 @@ class _SignUpState extends State<SignUp> {
                     ]),
                 child: TextField(
                     controller: passwordController,
+                    obscureText: true,
                     decoration: InputDecoration(
                         hintText: "Password",
                         hintStyle: GoogleFonts.quicksand(
@@ -146,6 +147,7 @@ class _SignUpState extends State<SignUp> {
                     ]),
                 child: TextField(
                     controller: confirmPasswordController,
+                    obscureText: true,
                     decoration: InputDecoration(
                         hintText: "Confirm Password",
                         hintStyle: GoogleFonts.quicksand(

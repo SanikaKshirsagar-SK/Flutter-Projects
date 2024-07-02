@@ -1,7 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
-
 dynamic database;
 
 class Player {
@@ -61,6 +60,7 @@ void main() async {
                     avg REAL)''');
     },
   );
+  
   Player batsman1 =
       Player(name: "Virat Kohli", jerNo: 18, runs: 60000, avg: 80.88);
   await insertPlayerData(batsman1);

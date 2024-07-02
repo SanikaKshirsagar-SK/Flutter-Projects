@@ -26,8 +26,7 @@ class _LoginState extends State<Login> {
             color: Colors.white,
           ),
         ),
-          automaticallyImplyLeading: false,
-
+        automaticallyImplyLeading: false,
         backgroundColor: const Color.fromARGB(255, 15, 1, 15),
       ),
       body: SingleChildScrollView(
@@ -97,6 +96,7 @@ class _LoginState extends State<Login> {
                   ]),
               child: TextField(
                   controller: passwordController,
+                  obscureText: true,
                   decoration: InputDecoration(
                       hintText: "Password",
                       hintStyle: GoogleFonts.quicksand(
@@ -139,7 +139,7 @@ class _LoginState extends State<Login> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Already have an account? ",
+                Text("New User? Click Here To Register..  ",
                     style: GoogleFonts.quicksand(
                         fontSize: 12,
                         fontWeight: FontWeight.w400,
