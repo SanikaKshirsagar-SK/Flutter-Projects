@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '/Controllers/principal_login_controller.dart';
+import '../../Controllers/login-signup/principal_login_controller.dart';
 
 class PrincipalLoginScreen extends StatefulWidget {
   const PrincipalLoginScreen({super.key});
@@ -56,12 +56,20 @@ class PrincipalLoginScreenState extends State<PrincipalLoginScreen> {
                     _formKey.currentState!.save();
                     // If Successful
                     try {
-                      await Provider.of<PrincipalLoginController>(context,
+                     await Provider.of<PrincipalLoginController>(context,
                               listen: false)
-                          .loginAsPrincipal(
+                         .loginAsPrincipal(
                               _principalEmail, _principalPassword);
-                      Navigator.pushReplacementNamed(
-                          context, '/register_teacher');
+                     if (Provider.of<PrincipalLoginController>(context, listen: false).isLoggedIn) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                                content:
+                                    Text('Principal Login successful')));
+                        Navigator.pushReplacementNamed(context, '/register_teacher');  }
+                        else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text('Invalid credentials')));
+                      }
                     } 
                     // If failed
                     catch (e) {

@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:school_management_system/Controllers/teacher_login_controller.dart';
+import '../../Controllers/login-signup/teacher_login_controller.dart';
 
 class LoginTeacherScreen extends StatefulWidget {
   const LoginTeacherScreen({super.key});
@@ -13,7 +13,8 @@ class LoginTeacherScreen extends StatefulWidget {
 
 class LoginTeacherScreenState extends State<LoginTeacherScreen> {
   final _formKey = GlobalKey<FormState>();
-  late String _teacherUsername, _teacherPassword;
+  final _usernameController = TextEditingController();
+  final _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +30,7 @@ class LoginTeacherScreenState extends State<LoginTeacherScreen> {
             children: [
               // Email TextField
               TextFormField(
+                controller: _usernameController,
                 decoration: const InputDecoration(labelText: 'Username'),
                 validator: (value) {
                   if (value!.isEmpty) {
@@ -36,10 +38,10 @@ class LoginTeacherScreenState extends State<LoginTeacherScreen> {
                   }
                   return null;
                 },
-                onSaved: (value) => _teacherUsername = value!,
               ),
               // Password TextField
               TextFormField(
+                controller: _passwordController,
                 decoration: const InputDecoration(labelText: 'Password'),
                 obscureText: true,
                 validator: (value) {
@@ -48,7 +50,6 @@ class LoginTeacherScreenState extends State<LoginTeacherScreen> {
                   }
                   return null;
                 },
-                onSaved: (value) => _teacherPassword = value!,
               ),
               const SizedBox(height: 20),
               // Login Button
@@ -57,14 +58,25 @@ class LoginTeacherScreenState extends State<LoginTeacherScreen> {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
                     try {
-                      await Provider.of<TeacherLoginController>(context, listen: false)
-                          .loginAsTeacher(_teacherUsername, _teacherPassword);
-                      Navigator.pushReplacementNamed(context, '/home');
-                    } catch (e) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Invalid credentials')));
-                        log('Error log in teacher: $e');
+                      await Provider.of<TeacherLoginController>(context,
+                              listen: false)
+                          .loginAsTeacher(_usernameController.text,
+                              _passwordController.text);
 
+                      if (Provider.of<TeacherLoginController>(context,
+                              listen: false)
+                          .isLoggedIn) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                                content: Text('Teacher Login successful')));
+                        Navigator.pushReplacementNamed(context, '/home');
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                                content: Text('Invalid credentials')));
+                      }
+                    } catch (e) {
+                      log('Error log in teacher: $e');
                     }
                   }
                 },

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:school_management_system/Controllers/teacher_registration_controller.dart';
-import '/Controllers/principal_login_controller.dart';
-import '/Controllers/teacher_login_controller.dart';
 import 'package:school_management_system/Views/home_page_screen.dart';
+import 'Controllers/login-signup/principal_login_controller.dart';
+import 'Controllers/login-signup/teacher_login_controller.dart';
+import 'Controllers/login-signup/teacher_registration_controller.dart';
 import 'Views/first_screen.dart';
-import 'Views/principal_login_screen.dart';
-import 'Views/teacher_login_screen.dart';
-import 'Views/teacher_registration_screen.dart';
+import 'Views/login-signup/principal_login_screen.dart';
+import 'Views/login-signup/teacher_login_screen.dart';
+import 'Views/login-signup/teacher_registration_screen.dart';
 
 //main() method
 void main() {

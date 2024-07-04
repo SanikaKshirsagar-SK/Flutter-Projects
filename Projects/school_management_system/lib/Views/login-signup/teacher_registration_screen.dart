@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../Controllers/teacher_registration_controller.dart';
-import '../Models/teacher_model.dart';
+import '../../Controllers/login-signup/teacher_registration_controller.dart';
+import '../../Models/teacher_model.dart';
 
 class RegisterTeacherScreen extends StatefulWidget {
   const RegisterTeacherScreen({super.key});

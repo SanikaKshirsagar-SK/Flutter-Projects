@@ -1,8 +1,8 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import '../Models/teacher_model.dart';
-import 'database_controller.dart';
+import '../../Models/teacher_model.dart';
+import '../../database/database_controller.dart';
 
 class TeacherRegisterController with ChangeNotifier {
   late TeacherModel _teacher;

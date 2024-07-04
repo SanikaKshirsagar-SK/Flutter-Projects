@@ -1,3 +1,6 @@
+
+import 'dart:developer';
+
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 // import 'package:sqflite_common_ffi/sqflite_ffi.dart';
@@ -40,6 +43,8 @@ class DatabaseHelper {
         password TEXT
       )
     ''');
+      log('Teacher Table created successfully');
+
   }
 
   //Inserting a Teacher's Data in Database
@@ -48,7 +53,8 @@ class DatabaseHelper {
     if (db == null) {
       throw Exception('Database is not initialized');
     }
-    return await db.insert(teachersTable, teacher.toMap(id: null));
+      log('Teacher Data inserted successfully');
+    return await db.insert(teachersTable, teacher.toMap(id: null)) ;
   }
 
   //Retrieving Teacher Data from Database
