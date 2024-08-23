@@ -60,12 +60,12 @@ class SignUpScreen extends GetView<DatabaseController> {
               children: [
                 customTextField("Name", controller: nameController),
                 const SizedBox(height: 30),
-                customTextField("Username", controller: usernameController),
+                customTextField("Username", controller: usernameController,),
                 const SizedBox(height: 30),
-                customTextField("Password", controller: passwordController),
+                customTextField("Password", controller: passwordController, obscureText: true),
                 const SizedBox(height: 30),
                 customTextField("Confirm Password",
-                    controller: confirmPasswordController),
+                    controller: confirmPasswordController,obscureText: true),
                 const SizedBox(
                   height: 30,
                 ),

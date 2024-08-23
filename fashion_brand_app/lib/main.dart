@@ -41,23 +41,6 @@ class MainApp extends StatelessWidget {
         Get.put(HomeController());
         Get.put(PaymentController());
       }),
-      theme: ThemeData(
-        primarySwatch: const MaterialColor(
-          0xFFff7a00,
-          <int, Color>{
-            50: Color(0xFFff7a00),
-            100: Color(0xFFff7a00),
-            200: Color(0xFFff7a00),
-            300: Color(0xFFff7a00),
-            400: Color(0xFFff7a00),
-            500: Color(0xFFff7a00),
-            600: Color(0xFFff7a00),
-            700: Color(0xFFff7a00),
-            800: Color(0xFFff7a00),
-            900: Color(0xFFff7a00),
-          },
-        ),
-      ),
       initialRoute: "/firstScreen",
       // home: const HomeScreen(),
       getPages: [

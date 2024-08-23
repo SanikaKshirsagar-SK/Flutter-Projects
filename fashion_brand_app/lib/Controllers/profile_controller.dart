@@ -1,6 +1,6 @@
-import "package:get/get.dart";
-import "../Models/user_model.dart";
-import "database_controller.dart";
+import 'package:get/get.dart';
+import '../Models/user_model.dart';
+import 'database_controller.dart';
 
 class ProfileController extends GetxController {
   final _userData = UserModel(name: "", username: "", password: "").obs;
@@ -11,23 +11,19 @@ class ProfileController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    _loadCredentials();
+    loadLoggedInUserCredentials();
   }
 
-  void _loadCredentials() async {
-    final userDataList = await _databaseController.fetchUserData();
-    if (userDataList.isNotEmpty) {
-      if (_loggedInUser != null) {
-        for (var userData in userDataList) {
-          if (userData.username == _loggedInUser!.username) {
-            _userData.value = userData;
-            break;
-          }
-        }
-      } else {
-        _userData.value = userDataList.first;
-      }
+  void loadCredentials() async {
+    if (_loggedInUser != null) {
+      _userData.value = _loggedInUser!;
       update();
+    } else {
+      final userDataList = await _databaseController.fetchUserData();
+      if (userDataList.isNotEmpty) {
+        _userData.value = userDataList.first;
+        update();
+      }
     }
   }
 
@@ -37,6 +33,13 @@ class ProfileController extends GetxController {
   void setLoggedInUser(UserModel? user) {
     _loggedInUser = user;
     update();
+  }
+
+  void loadLoggedInUserCredentials() async {
+    if (_loggedInUser != null) {
+      _userData.value = _loggedInUser!;
+      update();
+    }
   }
 
   void fetchAndSetUserData(String username, String password) async {

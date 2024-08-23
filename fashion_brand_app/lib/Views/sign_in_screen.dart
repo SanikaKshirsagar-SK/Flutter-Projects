@@ -85,7 +85,7 @@ class SignInScreen extends GetView<DatabaseController> {
                         controller: _usernameController),
                     const SizedBox(height: 30),
                     customTextField("Password",
-                        controller: _passwordController),
+                        controller: _passwordController,obscureText: true),
                     const SizedBox(
                       height: 30,
                     ),

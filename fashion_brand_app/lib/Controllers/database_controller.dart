@@ -10,7 +10,6 @@ import '../Models/order_history_model.dart';
 class DatabaseController extends GetxController {
   static Database? _database;
 
-
   Future<Database> get database async {
     if (_database != null) return _database!;
     _database = await createDB();

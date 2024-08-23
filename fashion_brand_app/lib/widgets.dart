@@ -22,61 +22,6 @@ TextStyle textStyleData(
           colors[0], colors[1], colors[2], colors[3].toDouble()));
 }
 
-TextStyle textStyleData16() {
-  return const TextStyle(
-      fontFamily: "acme", fontSize: 16, fontWeight: FontWeight.w400);
-}
-
-TextStyle textStyleData18({Color? color}) {
-  return TextStyle(
-    fontFamily: "acme",
-    fontSize: 18,
-    fontWeight: FontWeight.w600,
-    color: color ?? const Color.fromRGBO(13, 13, 14, 1),
-  );
-}
-
-TextStyle textStylAppBarData({Color? textColor}) {
-  return TextStyle(
-    fontFamily: "acme",
-    fontSize: 18,
-    fontWeight: FontWeight.w400,
-    color: textColor ?? const Color.fromRGBO(13, 13, 14, 1),
-  );
-}
-
-TextStyle textStyleData16grey() {
-  return const TextStyle(
-      fontFamily: "acme",
-      fontSize: 16,
-      fontWeight: FontWeight.w400,
-      color: Color.fromRGBO(121, 119, 128, 1));
-}
-
-SizedBox sizedBox20() {
-  return const SizedBox(
-    height: 20,
-  );
-}
-
-SizedBox sizedBox10() {
-  return const SizedBox(
-    height: 10,
-  );
-}
-
-SizedBox sizedBoxWidth10() {
-  return const SizedBox(
-    width: 10,
-  );
-}
-
-SizedBox sizedBoxWidth20() {
-  return const SizedBox(
-    width: 10,
-  );
-}
-
 Container customTextField(
   String hintText, {
   required TextEditingController controller,
@@ -112,6 +57,61 @@ Container customTextField(
                 borderRadius: BorderRadius.all(Radius.circular(8)),
                 borderSide: BorderSide.none))),
   );
+}
+
+SizedBox sizedBox20() {
+  return const SizedBox(
+    height: 20,
+  );
+}
+
+SizedBox sizedBox10() {
+  return const SizedBox(
+    height: 10,
+  );
+}
+
+SizedBox sizedBoxWidth10() {
+  return const SizedBox(
+    width: 10,
+  );
+}
+
+SizedBox sizedBoxWidth20() {
+  return const SizedBox(
+    width: 10,
+  );
+}
+
+TextStyle textStyleData16() {
+  return const TextStyle(
+      fontFamily: "acme", fontSize: 16, fontWeight: FontWeight.w400);
+}
+
+TextStyle textStyleData18({Color? color}) {
+  return TextStyle(
+    fontFamily: "acme",
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: color ?? const Color.fromRGBO(13, 13, 14, 1),
+  );
+}
+
+TextStyle textStylAppBarData({Color? textColor}) {
+  return TextStyle(
+    fontFamily: "acme",
+    fontSize: 18,
+    fontWeight: FontWeight.w400,
+    color: textColor ?? const Color.fromRGBO(13, 13, 14, 1),
+  );
+}
+
+TextStyle textStyleData16grey() {
+  return const TextStyle(
+      fontFamily: "acme",
+      fontSize: 16,
+      fontWeight: FontWeight.w400,
+      color: Color.fromRGBO(121, 119, 128, 1));
 }
 
 Container customTextFormField(
