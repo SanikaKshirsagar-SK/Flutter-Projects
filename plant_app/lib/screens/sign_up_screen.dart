@@ -32,7 +32,10 @@ class SignUpScreen extends GetView<DatabaseController> {
               children: [
                 customTextField1("Name", controller: nameController),
                 const SizedBox(height: 30),
-                customTextField1("Username", controller: emailController,),
+                customTextField1(
+                  "Username",
+                  controller: emailController,
+                ),
                 const SizedBox(height: 30),
                 customTextField1("Password",
                     controller: passwordController, obscureText: true),
@@ -44,18 +47,19 @@ class SignUpScreen extends GetView<DatabaseController> {
                 ),
                 GestureDetector(
                     onTap: () async {
-                if (_formKey.currentState!.validate()) {
-                  if (passwordController.text == confirmPasswordController.text) {
-                    await firebaseController.signUpWithEmailAndPassword(
-                      nameController.text,
-                      emailController.text,
-                      passwordController.text,
-                    );
-                  } else {
-                    firebaseController.unsuccessSnackBar();
-                  }
-                }
-              },
+                      if (_formKey.currentState!.validate()) {
+                        if (passwordController.text ==
+                            confirmPasswordController.text) {
+                          await firebaseController.signUpWithEmailAndPassword(
+                            nameController.text,
+                            emailController.text,
+                            passwordController.text,
+                          );
+                        } else {
+                          firebaseController.unsuccessSnackBar();
+                        }
+                      }
+                    },
                     child: buttonStyle(
                         buttonText: "Sign Up",
                         textColor: const Color.fromRGBO(255, 255, 255, 1),

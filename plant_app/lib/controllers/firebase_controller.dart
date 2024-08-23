@@ -11,9 +11,13 @@ class FirebaseController extends GetxController {
   final FirebaseAuth _auth = FirebaseAuth.instance;
       DatabaseController databaseController = Get.find();
 
-
   void successSnackBar() {
     Get.snackbar("Success", "Signed Up Successfully..",
+        backgroundColor: const Color.fromRGBO(118, 152, 75, 1),
+        snackPosition: SnackPosition.TOP);
+  }
+  void successSnackBarIn() {
+    Get.snackbar("Success", "Logged In Successfully..",
         backgroundColor: const Color.fromRGBO(118, 152, 75, 1),
         snackPosition: SnackPosition.TOP);
   }
@@ -63,7 +67,7 @@ class FirebaseController extends GetxController {
       }
       if (flag) {
         Get.find<ProfileController>().setLoggedInUser(loggedInUser);
-        successSnackBar();
+        successSnackBarIn();
         Future.delayed(const Duration(seconds: 1), () {
           Get.to(() => const HomeScreen());
         });

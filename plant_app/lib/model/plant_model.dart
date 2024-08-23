@@ -13,7 +13,6 @@ class PlantModel {
   final String potSize;
   int quantity;
 
-
   PlantModel({
     required this.id,
     required this.name,

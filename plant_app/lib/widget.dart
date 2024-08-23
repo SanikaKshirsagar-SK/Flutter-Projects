@@ -78,7 +78,7 @@ Widget customTextField({
   required TextEditingController controller,
   String hintText = "",
   Color color = const Color.fromRGBO(164, 164, 164, 1),
-  TextInputType keyboardType = TextInputType.number,
+  TextInputType keyboardType = TextInputType.text,
   IconData? prefixIcon,
   bool obscureText = false,
 }) {
