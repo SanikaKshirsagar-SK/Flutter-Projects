@@ -18,7 +18,7 @@ class SplashScreenState extends State<SplashScreen> {
         clipBehavior: Clip.none,
         children: [
           Image.asset(
-            "assets/first.png",
+            "assets/images/1.png",
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             fit: BoxFit.cover,

@@ -170,7 +170,7 @@ class HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             Image.asset(
-              "assets/2.png",
+              "assets/images/2.png",
               height: 400,
               width: 450,
               fit: BoxFit.cover,
