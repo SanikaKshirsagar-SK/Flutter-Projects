@@ -5,7 +5,6 @@ import '../widget.dart';
 
 class ContactUsScreen extends StatefulWidget {
   const ContactUsScreen({super.key});
-
   @override
   State<ContactUsScreen> createState() => _ContactUsScreenState();
 }
