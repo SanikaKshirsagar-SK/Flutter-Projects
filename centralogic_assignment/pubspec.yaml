@@ -1,0 +1,38 @@
+name: centralogic_assignment
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  equatable: ^2.0.7
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.0.0
+  flutter_svg: ^2.0.17
+  json_annotation: ^4.9.0
+  json_serializable: ^6.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/static/OpenSans-Regular.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/static/Roboto-Regular.ttf
+  assets:
+    - assets/products.json
+    - assets/images/books/
+    - assets/images/vendors/
+    - assets/images/authors/
+    - assets/images/
+

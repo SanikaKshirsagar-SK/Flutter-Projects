@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Apollo",
+    "description": "Powerful laptop with high performance",
+    "price": 1200.50,
+    "image": "assets/images/books/apollo.png"
+  },
+  {
+    "id": 2,
+    "name": "Art of War",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra dignissim ac ac ac. Nibh et sed ac, eget malesuada.",
+    "price": 800.00,
+    "image": "assets/images/books/art_of_war.png"
+  },
+  {
+    "id": 3,
+    "name": "Bright Young Women",
+    "description": "A captivating story of self-discovery.",
+    "price": 950.00,
+    "image": "assets/images/books/bright_young_women.png"
+  },
+  {
+    "id": 4,
+    "name": "Carrie Fisher",
+    "description": "A biography of the beloved actress.",
+    "price": 500.00,
+    "image": "assets/images/books/carrie_fisher.png"
+  },
+  {
+    "id": 5,
+    "name": "The Kite Runner",
+    "description": "A moving tale of friendship and redemption.",
+    "price": 700.00,
+    "image": "assets/images/books/the_kite_runner.png"
+  },
+  {
+    "id": 6,
+    "name": "The Subtle",
+    "description": "A thriller that keeps you on the edge of your seat.",
+    "price": 650.00,
+    "image": "assets/images/books/the_subtle.png"
+  },
+  {
+    "id": 7,
+    "name": "The Waiting",
+    "description": "A gripping story of patience and perseverance.",
+    "price": 550.00,
+    "image": "assets/images/books/the_waiting.png"
+  }
+]
